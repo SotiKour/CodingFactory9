@@ -1,0 +1,36 @@
+package gr.aueb.cf.cf9.ch5;
+
+import java.util.Scanner;
+
+/**
+ * Ορίζει 2 μεθόδους. Την isEven και την isOdd για τον έλεγχο
+ * ενός ακεραίου αν είναι άρτιος ή περιττός
+ */
+
+public class EvenOddApp {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int number = 0;
+        boolean isEven = false;
+
+        System.out.println("Please enter a number!");
+        number = scanner.nextInt();
+
+        isEven = isEven(number);
+
+        if (isEven) {
+            System.out.println(number + "is Even");
+        } else {
+            System.out.println(number + "is Odd");
+        }
+    }
+
+
+    public static boolean isEven(int number){
+        return number % 2 == 0;
+    }
+
+    public static boolean isOdd(int number){
+        return !isEven(number);
+    }
+}
